@@ -51,7 +51,7 @@ const addSubmitListener = () => {
 
 
 const displayRamens = () => {
-  // Add code
+
   fetch('http://localhost:3000/ramens')
     .then((response) => response.json())
     .then((ramens) => {
@@ -59,7 +59,7 @@ const displayRamens = () => {
         addRamenToMenu(ramen);
       });
 
-      // Automatically show the first ramen's details when the page loads
+      //  show the first ramen's details automatically when the page loads
       handleClick(ramens[0]);
     });
 };
@@ -68,10 +68,10 @@ const addRamenToMenu = (ramen) => {
   const ramenMenu = document.getElementById('ramen-menu');
   const img = document.createElement('img');
 
-  // Set the image's src attribute to the ramen's image URL
+  // Setting the image's src attribute to the ramen's image URL
   img.src = ramen.image;
 
-  // Add click event listener to show ramen details when the image is clicked
+  //  showing ramen details when the image is clicked
   img.addEventListener('click', () => handleClick(ramen));
 
   // Append the image to the ramen-menu div
