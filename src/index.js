@@ -46,14 +46,14 @@ const addSubmitListener = () => {
   });
 };
 
-// Define the API URL depending on whether the app is running locally or live
+// API URL  (locally or live)
 const API_URL = window.location.hostname === "localhost"
   ? "http://localhost:3000/ramens"  // Local development URL
   : "https://phase-1-cc-ramen-rater-v2-htj3.onrender.com/ramens";  // Live server URL
 
 // Function to fetch and display ramen data
 const displayRamens = () => {
-  fetch(API_URL)
+  fetch('https://phase-1-cc-ramen-rater-v2-htj3.onrender.com/ramens')
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
