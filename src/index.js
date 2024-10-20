@@ -46,10 +46,10 @@ const addSubmitListener = () => {
   });
 };
 
-// API URL  (locally or live)
-const API_URL = window.location.hostname === "localhost"
-  ? "http://localhost:3000/ramens"  // Local development URL
-  : "https://phase-1-cc-ramen-rater-v2-htj3.onrender.com/ramens";  // Live server URL
+// // API URL  (locally or live)
+// const API_URL = window.location.hostname === "localhost"
+//   ? "http://localhost:3000/ramens"  // Local development URL
+//   : "https://phase-1-cc-ramen-rater-v2-htj3.onrender.com/ramens";  // Live server URL
 
 // Function to fetch and display ramen data
 const displayRamens = () => {
