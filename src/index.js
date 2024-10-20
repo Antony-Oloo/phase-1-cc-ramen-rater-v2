@@ -53,16 +53,16 @@ const addSubmitListener = () => {
 
 const displayRamens = () => {
 
-  fetch('https://phase-1-cc-ramen-rater-v2-htj3.onrender.com')
-    .then((response) => response.json())
-    .then((ramens) => {
-      ramens.forEach((ramen) => {
-        addRamenToMenu(ramen);
-      });
-
-      //  show the first ramen's details automatically when the page loads
-      handleClick(ramens[0]);
+  fetch('https://phase-1-cc-ramen-rater-v2-htj3.onrender.com/ramens')
+  .then((response) => response.json())
+  .then((ramens) => {
+    console.log(ramens);  // Log the ramens data for debugging
+    ramens.forEach((ramen) => {
+      addRamenToMenu(ramen);
     });
+    handleClick(ramens[0]);
+  })
+  .catch((error) => console.error("Error fetching ramens:", error));
 };
 // Adds a ramen image to the #ramen-menu div
 const addRamenToMenu = (ramen) => {
