@@ -49,11 +49,11 @@ const addSubmitListener = () => {
     form.reset();
   });
 };
-const baseURL = window.location.hostname === 'localhost' ? 'http://localhost:3000/ramen' : 'https://phase-1-cc-ramen-rater-v2-htj3.onrender.com';
+
 
 const displayRamens = () => {
 
-  fetch('baseURL')
+  fetch('https://phase-1-cc-ramen-rater-v2-htj3.onrender.com')
     .then((response) => response.json())
     .then((ramens) => {
       ramens.forEach((ramen) => {
