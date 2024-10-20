@@ -1,7 +1,8 @@
 // Callbacks
 //  Handling click event on a ramen image and updating detail section   
 const handleClick = (ramen) => {
-  // Add code
+  
+  
   
   const ramenName = document.querySelector('#ramen-detail h2');
   const ramenRestaurant = document.querySelector('#ramen-detail h3');
